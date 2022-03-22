@@ -10,46 +10,92 @@ body {
   background-color: #fff;
   color: #333333;
 }
-nav {
-  box-shadow: 10px 0px 12px rgba(0, 0, 0, 0.3);
-}
-.todoApp {
+
+.container {
   display: flex;
   justify-content: center;
-  margin: 5rem 0;
+  align-items: center;
+  margin-top: 3rem;
+  .todoApp {
+    width: 38rem;
 
-  .content {
-    background-color: #fff;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 45rem;
-    #searchBox {
-      float: right;
-      width: 60%;
-      padding: 0.5rem;
-      font-weight: 500;
-      font-size: 1.2rem;
-      border: 1px dashed dodgerblue;
-      transition: all 1s;
-
-      &:focus {
-        width: 100%;
+    .bgColor {
+      background-color: #333;
+      border-radius: 2rem;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    }
+    .top {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      h1 {
+        font-size: 3rem;
+        color: #fff;
+      }
+      #searchBox {
+        background-color: #242424;
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1.8rem;
+        border: none;
         outline: none;
+        color: #fff;
       }
     }
 
-    .card {
-      border: none;
-      background-color: aliceblue;
-      margin: 1rem 0;
+    .content {
+      border-radius: 2rem;
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem;
 
-      &:hover {
-        background-color: lightgoldenrodyellow;
-      }
-      #deleteBtn {
+      #inputField {
+        background-color: #f6f6f6;
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1.8rem;
         border: none;
-        background-color: transparent;
+        outline: none;
+        color: #000;
+
+        &:focus {
+          border: none !important;
+          outline: none !important;
+        }
+      }
+      .card {
+        border: none;
+        margin: 1rem 0;
+        border-left: 0.3rem solid #333;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #deleteBtn {
+          border: none;
+          padding: 0.3rem 0.8rem;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          color: rgba(255, 0, 0, 0.548);
+
+          &:hover {
+            color: red;
+          }
+        }
+        #editBtn {
+          border: none;
+          padding: 0.3rem 0.8rem;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          color: rgba(30, 143, 255, 0.589);
+
+          &:hover {
+            color: dodgerblue;
+          }
+        }
       }
     }
   }

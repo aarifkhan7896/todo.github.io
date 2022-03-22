@@ -1,7 +1,6 @@
 const addBtn = document.querySelector('#addBtn');
 const inputField = document.querySelector('#inputField');
 const card = document.querySelector("#card");
-const searchIcon = document.querySelector('#searchIcon');
 const searchBox = document.querySelector('#searchBox');
 const allCard = document.querySelectorAll('.card');
 
@@ -56,10 +55,10 @@ function showData(){
                             <p class="card-text fs-4">${element.title}</p>
                             <div>
                             <button class="me-3" id="deleteBtn" title="delete" onclick="deleteFun(${index})">
-                            <i class="fas fa-trash fs-3 text-danger"></i>
+                            <i class="fas fa-trash"></i>
                             </button>
-                            <button id="deleteBtn" title="edit" onclick="editFun(${index})">
-                                <i class="fas fa-edit fs-3 text-primary"></i>
+                            <button id="editBtn" title="edit" onclick="editFun(${index})">
+                                <i class="fas fa-edit"></i>
                             </button>
                             </div>
                             </div>
@@ -86,9 +85,7 @@ function editFun(index){
     }else{
         newArr=JSON.parse(local);
     }
-    newArr.findIndex((element,index)=>{
-        inputField.value=element.title;
-    })
+    inputField.value = newArr[index].title;
     newArr.splice(index,1);
     localStorage.setItem('todo',JSON.stringify(newArr));
     showData();

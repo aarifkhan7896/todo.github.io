@@ -14,59 +14,109 @@ body {
   color: #333333;
 }
 
-nav {
-  -webkit-box-shadow: 10px 0px 12px rgba(0, 0, 0, 0.3);
-          box-shadow: 10px 0px 12px rgba(0, 0, 0, 0.3);
-}
-
-.todoApp {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
 }
 
-.todoApp .content {
-  background-color: #fff;
-  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: 45rem;
+.container .todoApp {
+  width: 38rem;
 }
 
-.todoApp .content #searchBox {
-  float: right;
-  width: 60%;
-  padding: 0.5rem;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border: 1px dashed dodgerblue;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+.container .todoApp .bgColor {
+  background-color: #333;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-.todoApp .content #searchBox:focus {
+.container .todoApp .top {
   width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container .todoApp .top h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.container .todoApp .top #searchBox {
+  background-color: #242424;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.8rem;
+  border: none;
   outline: none;
+  color: #fff;
 }
 
-.todoApp .content .card {
+.container .todoApp .content {
+  border-radius: 2rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.container .todoApp .content #inputField {
+  background-color: #f6f6f6;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.8rem;
   border: none;
-  background-color: aliceblue;
+  outline: none;
+  color: #000;
+}
+
+.container .todoApp .content #inputField:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.container .todoApp .content .card {
+  border: none;
   margin: 1rem 0;
+  border-left: 0.3rem solid #333;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
-.todoApp .content .card:hover {
-  background-color: lightgoldenrodyellow;
+.container .todoApp .content .card:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-.todoApp .content .card #deleteBtn {
+.container .todoApp .content .card #deleteBtn {
   border: none;
-  background-color: transparent;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: rgba(255, 0, 0, 0.548);
+}
+
+.container .todoApp .content .card #deleteBtn:hover {
+  color: red;
+}
+
+.container .todoApp .content .card #editBtn {
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: rgba(30, 143, 255, 0.589);
+}
+
+.container .todoApp .content .card #editBtn:hover {
+  color: dodgerblue;
 }
 
 @media only screen and (max-width: 700px) {
